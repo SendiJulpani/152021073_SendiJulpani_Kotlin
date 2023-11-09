@@ -1,11 +1,13 @@
 package com.example.projectuts
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
@@ -17,10 +19,31 @@ class NavigatorActivity : AppCompatActivity() {
 
     lateinit var toogle : ActionBarDrawerToggle
     lateinit var drawnerLayout : DrawerLayout
+    private lateinit var tvData1: TextView
+    private lateinit var tvData2: TextView
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_navigator)
+
+        tvData1 = findViewById(R.id.user_name)
+        tvData2 = findViewById(R.id.email)
+
+
+        if(intent.extras != null)
+        {
+            val bundle = intent.extras
+            if (bundle != null) {
+                tvData1.setText(bundle.getString("username"))
+            }
+            if (bundle != null) {
+                tvData2.setText(bundle.getString("email"))
+            }
+        }else{
+            tvData1.setText(intent.getStringExtra("username"))
+            tvData2.setText(intent.getStringExtra("email"))
+        }
 
         drawnerLayout = findViewById(R.id.drawnerLayout)
         val navView : NavigationView = findViewById(R.id.nav_view)
@@ -58,6 +81,8 @@ class NavigatorActivity : AppCompatActivity() {
         }
     }
 
+
+
     private fun replaceFragment(fragment: Fragment, title: String){
 
         val fragmentManager = supportFragmentManager
@@ -84,15 +109,12 @@ class NavigatorActivity : AppCompatActivity() {
         alertDialog.setTitle("Logout")
         alertDialog.setMessage("Are you sure you want to log out?")
         alertDialog.setPositiveButton("Yes") { _, _ ->
-            // Handle the logout action here
-            // You can start a new LoginActivity or clear user data as needed.
-            // For example:
-            // val intent = Intent(this, LoginActivity::class.java)
-            // startActivity(intent)
-            // finish()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
         alertDialog.setNegativeButton("No") { _, _ ->
-            // Dismiss the dialog
+
         }
         alertDialog.show()
     }
