@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="top|center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BMIKalkulatorFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="BMI Kalkulator"
+        style="@android:style/TextAppearance.Material.Headline"
+        android:padding="30dp"
+        android:fontFamily="@font/poppinssemibold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <TextView
+                style="@android:style/TextAppearance.Material.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Height"
+                android:textSize="20sp" />
+
+            <NumberPicker
+                android:id="@+id/heightPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp" />
+
+            <TextView
+                style="@android:style/TextAppearance.Material.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="cm"
+                android:textSize="20sp" />
+
+            <TextView
+                style="@android:style/TextAppearance.Material.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/poppinsregular"
+                android:text="Weight"
+                android:textSize="20sp" />
+
+            <NumberPicker
+                android:id="@+id/weightPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp" />
+
+            <TextView
+                style="@android:style/TextAppearance.Material.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsregular"
+                android:text="kg"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hasilTV"
+        android:padding="10dp"
+        android:fontFamily="@font/poppinsregular"
+        style="@android:style/TextAppearance.Material.Headline"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/healtyTV"
+        android:padding="10dp"
+        android:fontFamily="@font/poppinsregular"
+        style="@android:style/TextAppearance.Material.Headline"/>
+</LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

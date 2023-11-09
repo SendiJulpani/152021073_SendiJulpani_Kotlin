@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreenActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ciyan"/>
+    
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/iv_note"
+        android:src="@drawable/behance"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_note"
+        android:text="Welcome To Be Mine"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppinsbold"
+        android:layout_marginTop="10dp"
+        android:paddingTop="10dp"/>
+
+</RelativeLayout>

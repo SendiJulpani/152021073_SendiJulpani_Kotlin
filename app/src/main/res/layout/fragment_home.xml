@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    android:id="@+id/container"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DASHBOARD"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppinssemibold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/profile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:src="@drawable/baseline_person_24"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Profile"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/calculate"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:src="@drawable/baseline_calculate_24"
+                    android:clickable="true"
+                    android:contentDescription="TODO"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Calculator"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/suhu"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:src="@drawable/baseline_device_thermostat_24"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Suhu"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/konversi"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:src="@drawable/baseline_monetization_on_24"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Convert"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/bmi"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="70dp"
+                    android:clickable="true"
+                    android:layout_marginHorizontal="30dp"
+                    android:src="@drawable/baseline_scale_24"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="BMI"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/logout"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:src="@drawable/baseline_logout_24"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Logout"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textAlignment="center"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</FrameLayout>
